@@ -1,6 +1,24 @@
 import os
 import time
-# aturan cramer 3x3 ----------------------------------------------------------------------------------
+# Luas persegi ----------------------------------------------------------------------------------
+def Luaspersegi():
+    print("\33[31m-----------------------------------------------------------------\33[31m")
+    print("\33[1;34m----                Menghitung Luas persegi                  ----\33[1;31m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    print("\33[33m-----------------------------------------------------------------\33[33m")
+    print("\33[1;34m----                 create by 90s Rabbits                   ----\33[1;34m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    sisi = int(input("masukan sisi :"))
+
+    a = sisi * sisi
+    print("Luas persegi adalah :",a)
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        exit("Terima kasih")
 def cramer3x3():
 
     def perkalian(x,y):
@@ -126,6 +144,7 @@ def cramer3x3():
     print("Sehingga anda mendapat")
     print("z = Dz / D = ", c3)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
+    time.sleep(4)
     print("Anda ingin kembali ke menu [Y/N]")
     a = input("Masukan Pilihan anda :")
     if a == "y" or "Y":
@@ -187,7 +206,6 @@ def Determinan():
     print("Sehingga anda mendapat")
     print("y = Dy / D = ",t)
     time.sleep(4)
-    exit("Semoga anda senang :)")
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
     print("Anda ingin kembali ke menu [Y/N]")
     a = input("Masukan Pilihan anda :")
@@ -381,6 +399,7 @@ def Menu():
     print("2. Mencari InversMatrix Ordo 3x3")
     print("3. Mencari InversMatrix Ordo 2x2")
     print("4. Meyelesaikan persamaan linier dengan aturan Cramer 3x3")
+    print("5. Menghitung Luas persegi")
     print("0. Exit")
     menu = input("Masukan Pilihan Anda :")
     os.system("cls") or os.system("clear")
@@ -393,7 +412,9 @@ def Menu():
     elif menu == "4":
          cramer3x3()
     elif menu == "5":
-        exit("Semoga anda senang :)")
+        Luaspersegi()
+    elif menu == "6":
+        exit("Terima kasih")
     else:
         print("Menu salah")
 
