@@ -1,5 +1,25 @@
 import os
 import time
+# luas segitiga ---------------------------------------------------------------------------------
+def luassegitiga():
+    print("\33[31m-----------------------------------------------------------------\33[31m")
+    print("\33[1;34m----                Menghitung Luas segitiga                 ----\33[1;31m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    print("\33[33m-----------------------------------------------------------------\33[33m")
+    print("\33[1;34m----                 create by 90s Rabbits                   ----\33[1;34m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    print("Menghitung luas persegi ")
+    Alas = float(input("Alas :"))
+    Tinggi = float(input("Tinggi :"))
+    a = 1/2 * Alas * Tinggi
+    print(a)
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        exit("Terima kasih")
 # Luas persegi ----------------------------------------------------------------------------------
 def Luaspersegi():
     print("\33[31m-----------------------------------------------------------------\33[31m")
@@ -400,6 +420,7 @@ def Menu():
     print("3. Mencari InversMatrix Ordo 2x2")
     print("4. Meyelesaikan persamaan linier dengan aturan Cramer 3x3")
     print("5. Menghitung Luas persegi")
+    print("6. Menghitung Luas segitiga")
     print("0. Exit")
     menu = input("Masukan Pilihan Anda :")
     os.system("cls") or os.system("clear")
@@ -414,7 +435,9 @@ def Menu():
     elif menu == "5":
         Luaspersegi()
     elif menu == "6":
-        exit("Terima kasih")
+        luassegitiga()
+    elif menu == "0":
+        exit("Terimakasih")
     else:
         print("Menu salah")
 
