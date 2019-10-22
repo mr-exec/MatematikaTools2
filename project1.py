@@ -125,7 +125,14 @@ def cramer3x3():
     print("y = Dy / D = ", c2)
     print("Sehingga anda mendapat")
     print("z = Dz / D = ", c3)
-
+    # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        print("Terimakasih")
 # Aturan Cramer ----------------------------------------------------------------------------
 def Determinan():
     def perkalian(x, y):
@@ -181,6 +188,14 @@ def Determinan():
     print("y = Dy / D = ",t)
     time.sleep(4)
     exit("Semoga anda senang :)")
+    # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        print("Terimakasih")
 # Matrix invers 3x3 ----------------------------------------------------------------------------
 def InversMatrix3x3():
 
@@ -297,6 +312,14 @@ def InversMatrix3x3():
     print("-------------------------------------------------------------------------------")
     time.sleep(4)
     exit("Terima kasih telah mencoba Tools \n kami semoga bermanfaat")
+    # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        print("Terimakasih")
 # Matrix invers 2x2 ----------------------------------------------------------------------------
 def Matrix2x2():
     def perkalian(x,y):
@@ -341,6 +364,14 @@ def Matrix2x2():
         print("|",perkalian(c1,(1.0/hasil)),"| |",perkalian(a1,(1.0/hasil)))
     time.sleep(4)
     exit("Terima kasih Telah Mecoba Tools Kami")
+    # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
+    print("Anda ingin kembali ke menu [Y/N]")
+    a = input("Masukan Pilihan anda :")
+    if a == "y" or "Y":
+        Menu()
+        os.system("cls") or os.system("clear")
+    else:
+        print("Terimakasih")
 def Menu():
     print("\33[31m-----------------------------------------------------------------\33[31m")
     print("\33[1;34m----                     MENU PEMILIHAN                      ----\33[1;31m")
@@ -354,7 +385,7 @@ def Menu():
     print("4. Meyelesaikan persamaan linier dengan aturan Cramer 3x3")
     print("0. Exit")
     menu = input("Masukan Pilihan Anda :")
-    os.system("cls")
+    os.system("cls") or os.system("clear")
     if menu == "1":
         Determinan()
     elif menu == "2":
