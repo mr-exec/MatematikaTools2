@@ -8,7 +8,7 @@ def luassegitiga():
     print("\33[33m-----------------------------------------------------------------\33[33m")
     print("\33[1;34m----                 create by 90s Rabbits                   ----\33[1;34m")
     print("\33[30m-----------------------------------------------------------------\33[30m")
-    print("Menghitung luas persegi ")
+    print("Menghitung luas segitiga ")
     Alas = float(input("Alas :"))
     Tinggi = float(input("Tinggi :"))
     a = 1/2 * Alas * Tinggi
