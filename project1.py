@@ -132,7 +132,7 @@ def cramer3x3():
         Menu()
         os.system("cls") or os.system("clear")
     else:
-        print("Terimakasih")
+        exit("Terima kasih")
 # Aturan Cramer ----------------------------------------------------------------------------
 def Determinan():
     def perkalian(x, y):
@@ -195,7 +195,7 @@ def Determinan():
         Menu()
         os.system("cls") or os.system("clear")
     else:
-        print("Terimakasih")
+        exit("Terima kasih")
 # Matrix invers 3x3 ----------------------------------------------------------------------------
 def InversMatrix3x3():
 
@@ -311,7 +311,6 @@ def InversMatrix3x3():
 
     print("-------------------------------------------------------------------------------")
     time.sleep(4)
-    exit("Terima kasih telah mencoba Tools \n kami semoga bermanfaat")
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
     print("Anda ingin kembali ke menu [Y/N]")
     a = input("Masukan Pilihan anda :")
@@ -319,7 +318,7 @@ def InversMatrix3x3():
         Menu()
         os.system("cls") or os.system("clear")
     else:
-        print("Terimakasih")
+        exit("Terima kasih")
 # Matrix invers 2x2 ----------------------------------------------------------------------------
 def Matrix2x2():
     def perkalian(x,y):
@@ -363,7 +362,6 @@ def Matrix2x2():
         print("|",perkalian(d1,(1.0/hasil)),"| |",perkalian(b1,(1.0/hasil)))
         print("|",perkalian(c1,(1.0/hasil)),"| |",perkalian(a1,(1.0/hasil)))
     time.sleep(4)
-    exit("Terima kasih Telah Mecoba Tools Kami")
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
     print("Anda ingin kembali ke menu [Y/N]")
     a = input("Masukan Pilihan anda :")
@@ -371,7 +369,7 @@ def Matrix2x2():
         Menu()
         os.system("cls") or os.system("clear")
     else:
-        print("Terimakasih")
+        exit("Terima kasih")
 def Menu():
     print("\33[31m-----------------------------------------------------------------\33[31m")
     print("\33[1;34m----                     MENU PEMILIHAN                      ----\33[1;31m")
