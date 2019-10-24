@@ -1,6 +1,27 @@
 import os
 import time
-# luas segitiga ---------------------------------------------------------------------------------
+# luas lingkaran ---------------------------------------------------------------------------------
+def lingkaran():
+    print("\33[31m-----------------------------------------------------------------\33[31m")
+    print("\33[1;34m----                Menghitung Luas Lingkaran                ----\33[1;31m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    print("\33[33m-----------------------------------------------------------------\33[33m")
+    print("\33[1;34m----                 create by 90s Rabbits                   ----\33[1;34m")
+    print("\33[30m-----------------------------------------------------------------\33[30m")
+    a = float(input("masukan Jari - Jari  :"))
+    Luas = a * a * 31.4
+    print("Hasil Luas",Luas)
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
+        Menu()
+        os.system("clear")
+    else:
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
+# luas segitiga -------------------------------------------------------------------------------`
 def luassegitiga():
     print("\33[31m-----------------------------------------------------------------\33[31m")
     print("\33[1;34m----                Menghitung Luas segitiga                 ----\33[1;31m")
@@ -8,18 +29,21 @@ def luassegitiga():
     print("\33[33m-----------------------------------------------------------------\33[33m")
     print("\33[1;34m----                 create by 90s Rabbits                   ----\33[1;34m")
     print("\33[30m-----------------------------------------------------------------\33[30m")
-    print("Menghitung luas segitiga ")
+    print("Menghitung luas persegi ")
     Alas = float(input("Alas :"))
     Tinggi = float(input("Tinggi :"))
     a = 1/2 * Alas * Tinggi
-    print(a)
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Luas Segitiga Adalah :",a)
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
 # Luas persegi ----------------------------------------------------------------------------------
 def Luaspersegi():
     print("\33[31m-----------------------------------------------------------------\33[31m")
@@ -32,13 +56,17 @@ def Luaspersegi():
 
     a = sisi * sisi
     print("Luas persegi adalah :",a)
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
+# penyelesaian linier menggunakan aturan cramer 3x3 ------------------------------------------
 def cramer3x3():
 
     def perkalian(x,y):
@@ -165,13 +193,16 @@ def cramer3x3():
     print("z = Dz / D = ", c3)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
     time.sleep(4)
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
 # Aturan Cramer ----------------------------------------------------------------------------
 def Determinan():
     def perkalian(x, y):
@@ -227,13 +258,16 @@ def Determinan():
     print("y = Dy / D = ",t)
     time.sleep(4)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
 # Matrix invers 3x3 ----------------------------------------------------------------------------
 def InversMatrix3x3():
 
@@ -350,13 +384,16 @@ def InversMatrix3x3():
     print("-------------------------------------------------------------------------------")
     time.sleep(4)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
 # Matrix invers 2x2 ----------------------------------------------------------------------------
 def Matrix2x2():
     def perkalian(x,y):
@@ -389,25 +426,28 @@ def Matrix2x2():
     print("       |",c,"",d,"|")
     print("---------------------------------------")
     print("Bentuk Adjoin")
-    print("A = A-1|",d,"",b*(-1),"|")
-    print("       |",c*(-1),"",a,"|")
+    print("A = A-1|",d,"",c*(-1),"|")
+    print("       |",b*(-1),"",a,"|")
     print("---------------------------------------")
     if hasil == 0:
-        print("A = |",d1,"",b1,"|")
-        print("    |",c1,"",a1,"|")
+        print("A = |",d1,"",d1,"|")
+        print("    |",b1,"",a1,"|")
     else:
         print("Penyelesaian")
-        print("|",perkalian(d1,(1.0/hasil)),"| |",perkalian(b1,(1.0/hasil)))
-        print("|",perkalian(c1,(1.0/hasil)),"| |",perkalian(a1,(1.0/hasil)))
+        print("|",perkalian(d1,(1.0/hasil)),"| |",perkalian(c1,(1.0/hasil)))
+        print("|",perkalian(b1,(1.0/hasil)),"| |",perkalian(a1,(1.0/hasil)))
     time.sleep(4)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
-    print("Anda ingin kembali ke menu [Y/N]")
-    a = input("Masukan Pilihan anda :")
-    if a == "y" or "Y":
+    print("Anda ingin kembali ke menu [1/0]")
+    a = str(input("Masukan Pilihan anda :"))
+    if a == "1":
         Menu()
-        os.system("cls") or os.system("clear")
+        os.system("clear")
     else:
-        exit("Terima kasih")
+        if a == "0":
+            exit("Terimakasih")
+        else:
+            print("Maaf input yg anda masukan salah")
 def Menu():
     print("\33[31m-----------------------------------------------------------------\33[31m")
     print("\33[1;34m----                     MENU PEMILIHAN                      ----\33[1;31m")
@@ -421,14 +461,18 @@ def Menu():
     print("4. Meyelesaikan persamaan linier dengan aturan Cramer 3x3")
     print("5. Menghitung Luas persegi")
     print("6. Menghitung Luas segitiga")
+    print("7. Menghitung Luas lingkaran")
     print("0. Exit")
     menu = input("Masukan Pilihan Anda :")
-    os.system("cls") or os.system("clear")
+    os.system("clear")
     if menu == "1":
+        os.system("clear")
         Determinan()
     elif menu == "2":
+        os.system("clear")
         InversMatrix3x3()
     elif menu == "3":
+        os.system("clear")
         Matrix2x2()
     elif menu == "4":
          cramer3x3()
@@ -436,6 +480,8 @@ def Menu():
         Luaspersegi()
     elif menu == "6":
         luassegitiga()
+    elif menu == "7":
+        lingkaran()
     elif menu == "0":
         exit("Terimakasih")
     else:
