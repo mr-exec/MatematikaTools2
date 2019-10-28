@@ -203,7 +203,7 @@ def cramer3x3():
             exit("Terimakasih")
         else:
             print("Maaf input yg anda masukan salah")
-# Aturan Cramer ----------------------------------------------------------------------------
+# Aturan Cramer 2x2 ----------------------------------------------------------------------------
 def Determinan():
     def perkalian(x, y):
         return x * y
@@ -226,7 +226,6 @@ def Determinan():
     a22 = int(input("Masukan Nilai a22 :"))
     c1   = int(input("Masukan Nilai c1 :"))
     c2   = int(input("Masukan Nilai c2 :"))
-    os.system("cls")
     # perkalian determinan
     a = perkalian(a11,a22)
     b = perkalian(a21,a12)
@@ -237,14 +236,14 @@ def Determinan():
     print("Hasil Determinan =",f)
     print("--------------------------")
     # perkalian determinan x
-    A = perkalian(c1,a22) - perkalian(c2,a12)
+    A = perkalian(c1,a22) - perkalian(a12,c2)
     print("Bentuk Determinan Dx")
     print("|", c1, "  ", a12, "|")
     print("|", c2, "  ", a22, "|")
     print("Hasil Determinan =", A)
     print("--------------------------")
     # perkalian determinan y
-    x = perkalian(a11,c2) - perkalian(a21,c1)
+    x = perkalian(a11,c2) - perkalian(c1,a21)
     print("Bentuk Determinan Dy")
     print("|", a11, "  ",c1, "|")
     print("|", a21, "  ",c2, "|")
@@ -426,12 +425,12 @@ def Matrix2x2():
     print("       |",c,"",d,"|")
     print("---------------------------------------")
     print("Bentuk Adjoin")
-    print("A = A-1|",d,"",c*(-1),"|")
-    print("       |",b*(-1),"",a,"|")
+    print("A = A-1|",d,"",b*(-1),"|")
+    print("       |",c*(-1),"",a,"|")
     print("---------------------------------------")
     if hasil == 0:
-        print("A = |",d1,"",d1,"|")
-        print("    |",b1,"",a1,"|")
+        print("A = |",d1,"",b1,"|")
+        print("    |",c1,"",a1,"|")
     else:
         print("Penyelesaian")
         print("|",perkalian(d1,(1.0/hasil)),"| |",perkalian(c1,(1.0/hasil)))
@@ -475,16 +474,22 @@ def Menu():
         os.system("clear")
         Matrix2x2()
     elif menu == "4":
+         os.system("clear")
          cramer3x3()
     elif menu == "5":
+        os.system("clear")
         Luaspersegi()
     elif menu == "6":
+        os.system("clear")
         luassegitiga()
     elif menu == "7":
+        os.system("clear")
         lingkaran()
     elif menu == "0":
+        os.system("clear")
         exit("Terimakasih")
     else:
+        os.system("clear")
         print("Menu salah")
 
 print (Menu())
