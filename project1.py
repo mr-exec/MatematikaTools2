@@ -249,12 +249,13 @@ def Determinan():
     print("|", a21, "  ",c2, "|")
     print("Hasil Determinan =", x)
     print("--------------------------")
-    T = pembagian(A,f)
+    T = f
+    q = A / T
     print("Sehingga anda mendapat")
-    print("x = Dx / D = ",T)
-    t = pembagian(x,f)
+    print("x = Dx / D = ",q)
+    g = x / T
     print("Sehingga anda mendapat")
-    print("y = Dy / D = ",t)
+    print("y = Dy / D = ",g)
     time.sleep(4)
     # Pilihan kembali Ke menu atau tidak -----------------------------------------------------
     print("Anda ingin kembali ke menu [1/0]")
@@ -418,6 +419,11 @@ def Matrix2x2():
     b1 = perkalian(b,-1.0)
     c1 = perkalian(c,-1.0)
     d1 = d
+    print ("Bentuk Determinan")
+    f = a1 * d1 - b1 * c1
+    print("A = |", a, "", b, "|")
+    print("    |", c, "", d, "| Det A =",f)
+    print("---------------------------------------")
 
     hasil = (perkalian(a,d)-perkalian(c,b))
     print("Bentuk semula")
